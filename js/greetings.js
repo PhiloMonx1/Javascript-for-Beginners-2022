@@ -1,3 +1,4 @@
+'use strict';
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
@@ -22,6 +23,9 @@ const savedUsername = localStorage.getItem (USERNAME_KEY);
 if (savedUsername === null){ //show the form
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
-} else { //show the greeting
+} else if (savedUsername === "이진희"){ //show the greeting
+    greeting.innerText = `${savedUsername}는 모히칸이다`;
+    greeting.classList.remove(HIDDEN_CLASSNAME)
+}else{
     painGreetings(savedUsername);
 }
