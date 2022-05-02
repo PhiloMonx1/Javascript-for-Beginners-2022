@@ -1,4 +1,5 @@
 'use strict';
+
 const clock = document.querySelector("h2#clock")
 
 function getClock(){

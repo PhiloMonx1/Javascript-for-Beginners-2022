@@ -1,3 +1,5 @@
+'use strict';
+
 const quotes = [
     {
      quote: "나는 생각한다 고로케 먹고싶다" ,
